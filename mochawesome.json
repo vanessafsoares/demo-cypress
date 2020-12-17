@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-17T21:17:11.241Z",
-    "end": "2020-12-17T21:17:24.836Z",
-    "duration": 13595,
+    "start": "2020-12-17T21:17:25.938Z",
+    "end": "2020-12-17T21:17:39.543Z",
+    "duration": 13605,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9b0c19f1-ed73-4a2b-8200-2b8ed13835dd",
+      "uuid": "954294ae-3a33-455a-84e5-8ba76997702b",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f2b8bda0-e92a-46b3-a7cc-c7d79e500fbc",
+          "uuid": "bb593546-a554-4d94-a681-0a9dd481f6e8",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Efetuar cadastro de usuario",
               "fullTitle": "Cadastro Efetuar cadastro de usuario",
               "timedOut": null,
-              "duration": 13544,
+              "duration": 13524,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('Register.html');\nvar firstName = chance.first();\nvar lastName = chance.last();\nvar email = chance.email();\nvar phone = chance.phone({\n  formatted: false\n});\ncy.get('input[placeholder=\"First Name\"]').type(firstName);\ncy.get('input[placeholder=\"Last Name\"]').type(lastName);\ncy.get('input[ng-model^=Email]').type(email);\ncy.get('input[ng-model^=Phone]').type(phone); // check -> radios & checkboxes\ncy.get('input[value=FeMale').check();\ncy.get('input[type=checkbox').check('Movies'); // select -> select & select2(combos)\ncy.get('select#Skills').select('Javascript');\ncy.get('select#countries').select('Brazil');\ncy.get('select#countries').select('Australia', {\n  force: true\n});\ncy.get('select#yearbox').select('1997');\ncy.get('select[ng-model^=month]').select('November');\ncy.get('select#daybox').select('15');\ncy.get('input#firstpassword').type('TesteQA@123');\ncy.get('input#secondpassword').type('TesteQA@123');\ncy.get('input#imagesrc').attachFile('imagem.png');\ncy.get('button#submitbtn').click();",
               "err": {},
-              "uuid": "559b3c1c-afdd-4b2b-bfaf-060f71806b22",
-              "parentUUID": "f2b8bda0-e92a-46b3-a7cc-c7d79e500fbc",
+              "uuid": "4951dc21-7702-45dc-b5a7-133d2a851a38",
+              "parentUUID": "bb593546-a554-4d94-a681-0a9dd481f6e8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "559b3c1c-afdd-4b2b-bfaf-060f71806b22"
+            "4951dc21-7702-45dc-b5a7-133d2a851a38"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13544,
+          "duration": 13524,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
