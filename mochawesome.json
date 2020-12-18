@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-12-18T14:50:17.228Z",
-    "end": "2020-12-18T14:50:17.501Z",
-    "duration": 273,
+    "failures": 0,
+    "start": "2020-12-18T18:19:54.676Z",
+    "end": "2020-12-18T18:20:09.662Z",
+    "duration": 14986,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "885a8ec4-660e-41c3-af4d-1a4d8cd76dcc",
+      "uuid": "9ca18f89-c223-4ca7-8b49-b56948b50b13",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9c28876e-ba74-41e9-a031-f22b2f6b660b",
+          "uuid": "56f97ab7-2924-420c-85f4-65635545d026",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Efetuar cadastro de usuario",
               "fullTitle": "Cadastro Efetuar cadastro de usuario",
               "timedOut": null,
-              "duration": 225,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 14874,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.server();\ncy.route('POST', '**/api/1/databases/userdetails/collections/newtable?**').as('postNewTable');\ncy.route('POST', '**/api/1/databases/userdetails/collections/usertable?**').as('postUserTable');\ncy.route('GET', '**/api/1/databases/userdetails/collections/newtable?**').as('getNewTable');\ncy.visit('Register.html');\nvar firstName = chance.first();\nvar lastName = chance.last();\nvar email = chance.email();\nvar phone = chance.phone({\n  formatted: false\n});\ncy.get('input[placeholder=\"First Name\"]').type(firstName);\ncy.get('input[placeholder=\"Last Name\"]').type(lastName);\ncy.get('input[ng-model^=Email]').type(email);\ncy.get('input[ng-model^=Phone]').type(phone); // check -> radios & checkboxes\ncy.get('input[value=FeMale').check();\ncy.get('input[type=checkbox').check('Movies'); // select -> select & select2(combos)\ncy.get('select#Skills').select('Javascript');\ncy.get('select#countries').select('Brazil');\ncy.get('select#countries').select('Australia', {\n  force: true\n});\ncy.get('select#yearbox').select('1997');\ncy.get('select[ng-model^=month]').select('November');\ncy.get('select#daybox').select('15');\ncy.get('input#firstpassword').type('TesteQA@123');\ncy.get('input#secondpassword').type('TesteQA@123');\ncy.get('input#imagesrc').attachFile('imagem.png');\ncy.get('button#submitbtn').click();\ncy.wait('@postNewTable').then(function (resNewTable) {\n  expect(resNewTable.status).to.eq(200);\n});\ncy.wait('@postUserTable').then(function (resUserTable) {\n  expect(resUserTable.status).to.eq(200);\n});\ncy.wait('@getNewTable').then(function (resGetUserTable) {\n  expect(resGetUserTable.status).to.eq(200);\n  console.log('Cadastro realizado com sucesso');\n});\ncy.url().should('contain', 'WebTable');",
-              "err": {
-                "message": "TypeError: chance.first is not a function",
-                "estack": "TypeError: chance.first is not a function\n    at Context.eval (http://demo.automationtesting.in/__cypress/tests?p=cypress/integration/cadastro.spec.js:2216:28)",
-                "diff": null
-              },
-              "uuid": "55578b92-7f91-429d-aab4-a3c6ce4a980b",
-              "parentUUID": "9c28876e-ba74-41e9-a031-f22b2f6b660b",
+              "err": {},
+              "uuid": "b9a5d412-8d3b-4601-9c8d-fa762f96e766",
+              "parentUUID": "56f97ab7-2924-420c-85f4-65635545d026",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "55578b92-7f91-429d-aab4-a3c6ce4a980b"
+          "passes": [
+            "b9a5d412-8d3b-4601-9c8d-fa762f96e766"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 225,
+          "duration": 14874,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
