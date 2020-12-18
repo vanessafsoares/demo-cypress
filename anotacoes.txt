@@ -11,3 +11,16 @@ check(value) -> radio e checkboxes
 select(value) -> select & select2(combos)
 
 attachFile() -> input file
+
+cy.route -> antes do visit
+
+
+para interação com elementos:
+
+1 -> .first()
+2 ->
+3 ->
+4 -> .eq(3)
+5 -> .last()
+
+usando o .as('xxx') vc salva a asserção como uma variavel temporaria e pode usar com '@xxxx'

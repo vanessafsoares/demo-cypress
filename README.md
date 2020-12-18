@@ -1,6 +1,6 @@
 # Demo Automation Testing
 
-Projeto de automação de testes desenvolvido com intuito de validar o front-end do site [Automation Practice](http://demo.automationtesting.in/) utilizando as seguintes tecnologias:
+Projeto de automação de testes desenvolvido com intuito de validar o front-end do site [Demo Automation Testing](http://demo.automationtesting.in/) utilizando as seguintes tecnologias:
 
  - Javascript
  - Cypress
