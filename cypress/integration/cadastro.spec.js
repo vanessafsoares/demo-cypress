@@ -1,4 +1,4 @@
-const chance = require('chance')
+import 'chance'
 
 context('Cadastro', () => {
   it('Efetuar cadastro de usuario', () => {
