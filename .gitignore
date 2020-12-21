@@ -4,5 +4,5 @@ cypress/videos/
 cypress/screenshots
 mochawesome-report/
 index.json
-*.txt
+anotacoes.txt
 package-lock.json
