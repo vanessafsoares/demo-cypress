@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-12-18T20:05:16.555Z",
-    "end": "2020-12-18T20:05:34.023Z",
-    "duration": 17468,
+    "start": "2020-12-21T20:21:57.363Z",
+    "end": "2020-12-21T20:22:13.687Z",
+    "duration": 16324,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "56a1fa48-0e0b-4c83-a1ae-5c6ad5511146",
+      "uuid": "0ec15b19-7f21-4a70-9ce8-530556dbf623",
       "title": "",
       "fullFile": "cypress/integration/cadastro.spec.js",
       "file": "cypress/integration/cadastro.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "39c15547-4722-4470-8b03-5cc8e64624b6",
+          "uuid": "9fb04ffa-d745-419b-a5d1-09d79f727dca",
           "title": "Cadastro",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Efetuar cadastro de usuario",
               "fullTitle": "Cadastro Efetuar cadastro de usuario",
               "timedOut": null,
-              "duration": 17347,
+              "duration": 16150,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.server();\ncy.route('POST', '**/api/1/databases/userdetails/collections/newtable?**').as('postNewTable');\ncy.route('POST', '**/api/1/databases/userdetails/collections/usertable?**').as('postUserTable');\ncy.route('GET', '**/api/1/databases/userdetails/collections/newtable?**').as('getNewTable');\ncy.visit('Register.html');\nvar firstName = chance.first();\nvar lastName = chance.last();\nvar email = chance.email();\nvar phone = chance.phone({\n  formatted: false\n});\ncy.get('input[placeholder=\"First Name\"]').type(firstName);\ncy.get('input[placeholder=\"Last Name\"]').type(lastName);\ncy.get('input[ng-model^=Email]').type(email);\ncy.get('input[ng-model^=Phone]').type(phone); // check -> radios & checkboxes\ncy.get('input[value=FeMale').check();\ncy.get('input[type=checkbox').check('Movies'); // select -> select & select2(combos)\ncy.get('select#Skills').select('Javascript');\ncy.get('select#countries').select('Brazil');\ncy.get('select#countries').select('Australia', {\n  force: true\n});\ncy.get('select#yearbox').select('1997');\ncy.get('select[ng-model^=month]').select('November');\ncy.get('select#daybox').select('15');\ncy.get('input#firstpassword').type('TesteQA@123');\ncy.get('input#secondpassword').type('TesteQA@123');\ncy.get('input#imagesrc').attachFile('imagem.png');\ncy.get('button#submitbtn').click();\ncy.wait('@postNewTable').then(function (resNewTable) {\n  expect(resNewTable.status).to.eq(200);\n});\ncy.wait('@postUserTable').then(function (resUserTable) {\n  expect(resUserTable.status).to.eq(200);\n});\ncy.wait('@getNewTable').then(function (resGetUserTable) {\n  expect(resGetUserTable.status).to.eq(200);\n  console.log('Cadastro realizado com sucesso');\n});\ncy.url().should('contain', 'WebTable');",
               "err": {},
-              "uuid": "53027e5f-5d0c-45eb-827e-2e71b1362afb",
-              "parentUUID": "39c15547-4722-4470-8b03-5cc8e64624b6",
+              "uuid": "04c0c68a-70a1-4f7e-afab-712ba051e9e5",
+              "parentUUID": "9fb04ffa-d745-419b-a5d1-09d79f727dca",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "53027e5f-5d0c-45eb-827e-2e71b1362afb"
+            "04c0c68a-70a1-4f7e-afab-712ba051e9e5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17347,
+          "duration": 16150,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
